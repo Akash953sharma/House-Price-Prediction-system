@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction System</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 700px;
+            max-width: 95%;
+            margin: 30px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        .about {
+            margin-top: 20px;
+        }
+
+        .about p {
+            line-height: 1.7;
+        }
+
+        .footer {
+            margin-top: 30px;
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>House Price Prediction System</h1>
+        <p>Machine Learning Based Property Price Estimation</p>
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>Property Details</h2>
+
+            <form action="/predict" method="POST">
+
+                <label>Area (sq ft)</label>
+                <input type="number" name="area" required>
+
+                <label>Bedrooms</label>
+                <input type="number" name="bedrooms" required>
+
+                <label>Bathrooms</label>
+                <input type="number" name="bathrooms" required>
+
+                <label>Parking</label>
+                <input type="number" name="parking" required>
+
+                <label>Age (Years)</label>
+                <input type="number" name="age" required>
+
+                <label>Floor</label>
+                <input type="number" name="floor" required>
+
+                <label>Total Floors</label>
+                <input type="number" name="total_floors" required>
+
+                <label>Balcony</label>
+                <input type="number" name="balcony" required>
+
+                <label>School Distance (km)</label>
+                <input type="number" step="0.1" name="school_distance" required>
+
+                <label>Hospital Distance (km)</label>
+                <input type="number" step="0.1" name="hospital_distance" required>
+
+                <label>Metro Distance (km)</label>
+                <input type="number" step="0.1" name="metro_distance" required>
+
+                <label>Market Distance (km)</label>
+                <input type="number" step="0.1" name="market_distance" required>
+
+                <label>Location</label>
+                <select name="location">
+                    <option>Patna</option>
+                    <option>Mumbai</option>
+                    <option>Kolkata</option>
+                </select>
+
+                <label>Furnishing</label>
+                <select name="furnishing">
+                    <option>Furnished</option>
+                    <option>Semi-Furnished</option>
+                    <option>Unfurnished</option>
+                </select>
+
+                <label>Lift</label>
+                <select name="lift">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+
+                <label>Gym</label>
+                <select name="gym">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+
+                <label>Swimming Pool</label>
+                <select name="pool">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+
+                <button type="submit">
+                    Predict House Price
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="card about">
+
+            <h2>About Project</h2>
+
+            <p>
+                This project predicts house prices using Machine Learning techniques.
+                The prediction is based on area, location, bedrooms, bathrooms,
+                furnishing status and nearby facilities such as school, hospital,
+                metro station and market distance.
+            </p>
+
+
+
+            <h3>Technologies Used</h3>
+
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Final Year Project - House Price Prediction System
+    </div>
+
+</body>
+
+</html>

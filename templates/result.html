@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prediction Result</title>
+
+    <style>
+        body {
+            background: #f4f6f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 500px;
+            margin: 50px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin-top: 15px;
+        }
+
+        .price {
+            color: green;
+            font-size: 35px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <img src="{{ url_for('static', filename=image) }}">
+
+            <h1>Predicted House Price</h1>
+
+            <div class="price">
+                {{ prediction }}
+            </div>
+
+            <p>
+                This estimated price is generated using Machine Learning
+                based on property features and nearby facilities.
+            </p>
+
+            <br>
+
+            <a href="/">
+                <button>Predict Another House</button>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
